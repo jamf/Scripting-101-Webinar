@@ -4,7 +4,7 @@
 
 # NOTE: This requires the Install macOS Mojave app already be in the Applications folder
 
-/Library/Application\ Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper \
+"/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper" \
 -windowType utility \
 -lockHUD \
 -title "macOS Mojave Upgrade" \
@@ -19,5 +19,10 @@ To begin the upgrade immediately, press the 'Upgrade Now' button." \
 -countdown \
 -timeout 300 \
 -alignCountdown right
+
+# Echo statements in scripts are recording in Jamf Pro policy logs.
+# This is a great way to report status, success or failure in your policies.
+
+echo Five minute countdown complete. Proceeding with upgrade.
 
 exit 0
